@@ -16,6 +16,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Example2Activity"
+            android:label="@string/title_activity_example2"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="my.android.workbench.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AppNoResponseActivity"
+            android:label="@string/title_activity_app_no_response"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="my.android.workbench.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
