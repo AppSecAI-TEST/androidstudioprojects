@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">My Android Workbench</string>
     <string name="title_activity_example2">Example2 Screen</string>
-    <string name="title_activity_app_no_response">AppNoResponseActivity</string>
+    <string name="title_activity_app_no_response">Slow Response</string>
+    <string name="title_activity_app_slow_response_async">AppSlowResponseAsyncActivity</string>
 </resources>

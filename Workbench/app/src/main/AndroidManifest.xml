@@ -26,8 +26,17 @@
                 android:value="my.android.workbench.MainActivity" />
         </activity>
         <activity
-            android:name=".AppNoResponseActivity"
+            android:name=".AppSlowResponseActivity"
             android:label="@string/title_activity_app_no_response"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="my.android.workbench.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AppSlowResponseAsyncActivity"
+            android:label="@string/title_activity_app_slow_response_async"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data

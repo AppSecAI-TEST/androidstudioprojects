@@ -9,14 +9,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
-public class AppNoResponseActivity extends AppCompatActivity {
+public class AppSlowResponseActivity extends AppCompatActivity {
 
     TextView tv; // for class wide reference to update status
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_app_no_response);
+        setContentView(R.layout.activity_app_slow_response);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 

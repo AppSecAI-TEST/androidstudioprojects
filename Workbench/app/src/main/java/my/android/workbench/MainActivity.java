@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         findViewById(R.id.buttonEx2).setOnClickListener(new example2Screen());
         findViewById(R.id.buttonEx3SyncResp).setOnClickListener(new example3OnSync());
+        findViewById(R.id.buttonEx3ASyncResp).setOnClickListener(new example3OnAsync());
     }
 
     class example2Screen implements View.OnClickListener {
@@ -24,8 +25,16 @@ public class MainActivity extends AppCompatActivity {
 
     class example3OnSync implements View.OnClickListener {
         public void onClick(View v) {
-            Intent intent = new Intent(MainActivity.this, AppNoResponseActivity.class);
+            Intent intent = new Intent(MainActivity.this, AppSlowResponseActivity.class);
             startActivity(intent);
         }
     }
+
+    class example3OnAsync implements View.OnClickListener {
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, AppSlowResponseAsyncActivity.class);
+            startActivity(intent);
+        }
+    }
+
 }
