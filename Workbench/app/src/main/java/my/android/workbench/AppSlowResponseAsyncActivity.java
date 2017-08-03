@@ -103,8 +103,10 @@ public class AppSlowResponseAsyncActivity extends AppCompatActivity {
             bt.setText("Go");
         }
 
-        protected void onCancelled() {
+        protected void onCancelled(Integer result) {
             // run on UI thread if task is cancelled
+            // result comes from return value of doInBackground
+            tv.setText("Cancelled called after " + result + " processes.");
             processing = false;
             bt.setText("Go");
         }
