@@ -7,6 +7,18 @@
     tools:context="my.android.workbench.MainActivity">
 
     <Button
+        android:id="@+id/buttonEx4ContactForm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Example 4 Contact Form"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEx3ASyncResp" />
+
+    <Button
         android:id="@+id/buttonEx3ASyncResp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
