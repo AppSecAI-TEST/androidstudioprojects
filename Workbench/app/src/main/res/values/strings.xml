@@ -4,4 +4,5 @@
     <string name="title_activity_app_no_response">Slow Response</string>
     <string name="title_activity_app_slow_response_async">AppSlowResponseAsyncActivity</string>
     <string name="title_activity_contact_form">ContactFormActivity</string>
+    <string name="title_activity_list_example">ListExampleActivity</string>
 </resources>

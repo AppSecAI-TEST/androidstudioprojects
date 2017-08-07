@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonEx2).setOnClickListener(new example2Screen());
         findViewById(R.id.buttonEx3SyncResp).setOnClickListener(new example3OnSync());
         findViewById(R.id.buttonEx3ASyncResp).setOnClickListener(new example3OnAsync());
-        findViewById(R.id.buttonEx4ContactForm).setOnClickListener(new example4ContactForm());
+        findViewById(R.id.buttonEx4ListExample).setOnClickListener(new example4OnList());
         Log.d("my.android.workbench", "onCreate");
     }
 
@@ -70,11 +71,19 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    class example4ContactForm implements View.OnClickListener {
+    class example4OnList implements View.OnClickListener {
         public void onClick(View v) {
-            Intent intent = new Intent (MainActivity.this, ContactFormActivity.class);
-            startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, ListExampleActivity.class);
+            startActivityForResult(intent, 0);
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(data != null && data.hasExtra("Order"))
+            Toast.makeText(this, data.getStringExtra("Order") + " ordered.", Toast.LENGTH_LONG).show();
+        else
+            Toast.makeText(this, "Nothing ordered!", Toast.LENGTH_LONG).show();
     }
 
 }

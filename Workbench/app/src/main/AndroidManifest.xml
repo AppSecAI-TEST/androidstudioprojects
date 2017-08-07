@@ -44,8 +44,8 @@
                 android:value="my.android.workbench.MainActivity" />
         </activity>
         <activity
-            android:name=".ContactFormActivity"
-            android:label="@string/title_activity_contact_form"
+            android:name=".ListExampleActivity"
+            android:label="@string/title_activity_list_example"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
