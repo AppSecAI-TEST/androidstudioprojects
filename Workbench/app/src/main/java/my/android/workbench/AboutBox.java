@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.text.SpannableString;
 import android.text.util.Linkify;
+import android.util.Log;
 import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,11 +25,13 @@ public class AboutBox {
             return "Unknown";
         }
     }
-    public static void show(Activity callingActivity) {
+    public static void Show(Activity callingActivity) {
         // Use a Spannable to allow for links highlighting
+        String temp = VersionName(callingActivity);
+
         SpannableString aboutText = new SpannableString("Version "
                                                         +VersionName(callingActivity)
-                                                        +"nn"
+                                                        +"\n"
                                                         +callingActivity.getString(R.string.about));
         // Generate views to pass to AlertDialog.Builder and to set the text
         View about;

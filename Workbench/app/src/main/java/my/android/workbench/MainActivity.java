@@ -17,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonEx3SyncResp).setOnClickListener(new example3OnSync());
         findViewById(R.id.buttonEx3ASyncResp).setOnClickListener(new example3OnAsync());
         findViewById(R.id.buttonEx4ListExample).setOnClickListener(new example4OnList());
+        findViewById(R.id.buttonAbout).setOnClickListener(new View.OnClickListener(){
+            public void onClick(View arg0) {
+                AboutBox.Show(MainActivity.this);
+            }
+        });
         Log.d("my.android.workbench", "onCreate");
     }
 
